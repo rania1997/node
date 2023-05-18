@@ -5,7 +5,7 @@ dotenv.config();
 process.env.TOKEN_SECRET;
 
 export function generateAccessToken(email) {
-    return jwt.sign(email, process.env.TOKEN_SECRET, { expiresIn: '1800 s' });
+    return jwt.sign(email, process.env.TOKEN_SECRET, { expiresIn: '1800s' });
   }
 
 

@@ -6,7 +6,6 @@ const MIME_TYPES ={
     "image/jpg":"jpg",
     "image/jpeg":"jpeg",
     "image/png":"png",
-
 };
 
 export default multer({

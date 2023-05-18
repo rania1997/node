@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { getAll, signUp, signIn, getOnce, 
+import { getAll, signUp, signIn, getOnce,  confirmation,
 putOnce, patchOnce, deleteOnce } from '../controllers/user.js';
 import {authenticateToken} from '../configuration/auth.js';
 // import multer from '../middlewares/muter-config.js';
@@ -15,5 +15,7 @@ router.route('/signup').post(signUp);
 
 router.route('/:nom').get(authenticateToken,getOnce).put(putOnce)
 .patch(patchOnce).delete(deleteOnce);
+
+router.get("/confirmation/:_id", confirmation)
 
 export default router;
